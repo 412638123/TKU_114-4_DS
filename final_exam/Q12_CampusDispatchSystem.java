@@ -182,4 +182,16 @@ public class Q12_CampusDispatchSystem {
 
         return visited;
     }
+
+    public static void main(String[] args) {
+        Q12_CampusDispatchSystem system = new Q12_CampusDispatchSystem();
+        system.addLocation("A");
+        system.addLocation("B");
+        system.addRoad("A", "B");
+
+        system.submit(new Request("Req1", "B", 1, 10));
+
+        System.out.println("Q12 最短路線 A 到 B: " + system.route("A", "B"));
+        System.out.println("Q12 優先處理任務: " + system.nextReachable("A"));
+    }
 }

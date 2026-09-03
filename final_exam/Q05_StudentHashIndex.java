@@ -93,4 +93,16 @@ public class Q05_StudentHashIndex {
     public int enrollmentCount() {
         return totalEnrollmentCount;
     }
+
+    public static void main(String[] args) {
+        Q05_StudentHashIndex index = new Q05_StudentHashIndex();
+        index.enroll(" s001 ", " cs101 ");
+        index.enroll("S001", "CS102");
+
+        System.out.println("Q05 S001 所選課程: " + index.coursesOf("s001"));
+        System.out.println("Q05 總選課人次: " + index.enrollmentCount());
+        
+        index.drop("s001", "cs101");
+        System.out.println("Q05 退選後總選課人次: " + index.enrollmentCount());
+    }
 }

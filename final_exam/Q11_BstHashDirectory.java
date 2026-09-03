@@ -129,4 +129,14 @@ public class Q11_BstHashDirectory {
             rangeSearch(node.right, low, high, result);
         }
     }
+
+    public static void main(String[] args) {
+        Q11_BstHashDirectory dir = new Q11_BstHashDirectory();
+        dir.add(10, " Alice ");
+        dir.add(5, "Bob");
+        dir.add(15, "Charlie");
+
+        System.out.println("Q11 尋找 ID 10: " + dir.findName(10));
+        System.out.println("Q11 範圍 5~12 之間的 ID: " + dir.idsBetween(5, 12));
+    }
 }

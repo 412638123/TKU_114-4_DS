@@ -1,5 +1,6 @@
 package final_exam;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Q03_MinHeapRemove {
@@ -77,5 +78,14 @@ public class Q03_MinHeapRemove {
         int temp = heap.get(i);
         heap.set(i, heap.get(j));
         heap.set(j, temp);
+    }
+
+    public static void main(String[] args) {
+        List<Integer> data = Arrays.asList(9, 4, 7, null, 1, 20, 3);
+        Q03_MinHeapRemove heap = new Q03_MinHeapRemove(data);
+
+        System.out.println("Q03 建置後 Heap 快照: " + heap.snapshot());
+        System.out.println("Q03 移除最小值: " + heap.removeMin());
+        System.out.println("Q03 移除後 Heap 快照: " + heap.snapshot());
     }
 }

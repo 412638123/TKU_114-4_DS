@@ -1,6 +1,7 @@
 package final_exam;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -65,5 +66,16 @@ public class Q09_DfsPathSearch {
         }
 
         return false;
+    }
+
+    public static void main(String[] args) {
+        Map<String, List<String>> graph = new HashMap<>();
+        graph.put("A", List.of("B", "C"));
+        graph.put("B", List.of("D"));
+        graph.put("C", Collections.emptyList());
+        graph.put("D", Collections.emptyList());
+
+        System.out.println("Q09 DFS 走訪結果: " + dfs(graph, "A"));
+        System.out.println("Q09 A 是否可達 D: " + reachable(graph, "A", "D"));
     }
 }

@@ -89,4 +89,15 @@ public class Q04_ChainedHashTable {
         }
         return max;
     }
+
+    public static void main(String[] args) {
+        Q04_ChainedHashTable table = new Q04_ChainedHashTable(3);
+        table.put(1, "Value1");
+        table.put(4, "Value4");
+        table.put(-2, "ValueNeg2");
+
+        System.out.println("Q04 取得 key 4: " + table.get(4));
+        System.out.println("Q04 總筆數: " + table.size());
+        System.out.println("Q04 最長鏈長度: " + table.longestChain());
+    }
 }

@@ -60,4 +60,16 @@ public class Q02_MinHeapInsert {
         heap.set(i, heap.get(j));
         heap.set(j, temp);
     }
+
+    public static void main(String[] args) {
+        Q02_MinHeapInsert heap = new Q02_MinHeapInsert();
+        heap.add(10);
+        heap.add(4);
+        heap.add(15);
+        heap.add(2);
+
+        System.out.println("Q02 Peek 最小值: " + heap.peek());
+        System.out.println("Q02 Heap 快照: " + heap.snapshot());
+        System.out.println("Q02 是否為有效 MinHeap: " + heap.isValidMinHeap());
+    }
 }

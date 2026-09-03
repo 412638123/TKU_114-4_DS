@@ -69,4 +69,15 @@ public class Q08_BfsTraversal {
 
         return distances;
     }
+
+    public static void main(String[] args) {
+        Map<String, List<String>> graph = new HashMap<>();
+        graph.put("A", List.of("B", "C"));
+        graph.put("B", List.of("D"));
+        graph.put("C", List.of("D"));
+        graph.put("D", Collections.emptyList());
+
+        System.out.println("Q08 BFS 走訪結果: " + bfs(graph, "A"));
+        System.out.println("Q08 距離起點 A 距離: " + distanceFrom(graph, "A"));
+    }
 }

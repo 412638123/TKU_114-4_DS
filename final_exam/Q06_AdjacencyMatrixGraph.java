@@ -121,4 +121,14 @@ public class Q06_AdjacencyMatrixGraph {
         }
         return result;
     }
+
+    public static void main(String[] args) {
+        List<String> nodes = List.of("A", "B", "C");
+        Q06_AdjacencyMatrixGraph graph = new Q06_AdjacencyMatrixGraph(nodes);
+        graph.addEdge("A", "B");
+        graph.addEdge("A", "C");
+
+        System.out.println("Q06 A 的 Degree: " + graph.degree("A"));
+        System.out.println("Q06 A 的 鄰居: " + graph.neighbors("A"));
+    }
 }

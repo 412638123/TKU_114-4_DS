@@ -79,4 +79,15 @@ public class Q07_AdjacencyListGraph {
     public int edgeCount() {
         return totalEdges;
     }
+
+    public static void main(String[] args) {
+        Q07_AdjacencyListGraph graph = new Q07_AdjacencyListGraph();
+        graph.addVertex("A");
+        graph.addVertex("B");
+        graph.addEdge("A", "B");
+
+        System.out.println("Q07 B 的 inDegree: " + graph.inDegree("B"));
+        System.out.println("Q07 A 的 outgoing: " + graph.outgoing("A"));
+        System.out.println("Q07 總邊數: " + graph.edgeCount());
+    }
 }

@@ -65,4 +65,14 @@ public class Q10_UnweightedShortestPath {
         Collections.reverse(path);
         return path;
     }
+
+    public static void main(String[] args) {
+        Map<String, List<String>> graph = new HashMap<>();
+        graph.put("A", List.of("B", "C"));
+        graph.put("B", List.of("D"));
+        graph.put("C", List.of("D"));
+        graph.put("D", Collections.emptyList());
+
+        System.out.println("Q10 最短路徑: " + shortestPath(graph, "A", "D"));
+    }
 }
